@@ -2,8 +2,8 @@
 
 Explore the sub-folders to find community-ready presentation materials on the following topics:
 
-- [Xamarin](Devops/README.md)
-- [Cordova](Cordova/README.md)
+- [Xamarin](Xamarin)
+- [Cordova](Cordova)
 
 
 **Introduction**
