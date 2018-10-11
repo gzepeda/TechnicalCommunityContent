@@ -91,17 +91,17 @@ In this exercise, you will prepare your development environment so you can build
 
 1. Download and install the latest version of the HoloLens emulator package. You will find a link to the current release in the [Installation checklist](https://developer.microsoft.com/en-us/windows/holographic/install_the_tools#installation_checklist) on Microsoft's HoloLens developer portal.
 
-    > The emulator isn't strictly necessary if you have a HoloLens available, but the installation package also comes with additional app templates. Also, the emulator allows you to simulate a specific room interior (captured from an actual device beforehand), which can be quite useful in certain scenarios.
+    > The emulator isn't strictly necessary if you have a HoloLens available, but the installation package also comes with additional app templates. Also, the emulator allows you to simulate a specific room interior (captured from an actual device beforehand), which can be quite useful in certain scenarios. https://go.microsoft.com/fwlink/?linkid=852626
 
     ![Installing the HoloLens emulator](Images/emulator_install.jpg)
 
     _Installing the HoloLens emulator_
 
-1. Download and install the latest release of Unity from https://unity3d.com/unity. The free Personal Edition will work just fine while you are learning.
+1. Download and install the latest release of Unity from https://unity3d.com/unity/qa/lts-releases. The free Personal Edition will work just fine while you are learning.
 
     > If you have worked with Unity and HoloLens previously, you may recall needing to download a special build. HoloLens support is now fully integrated into Unity, so you no longer need to do that. The "normal" release version is sufficient now.
 
-1. You must have a Unity account to sign in to Unity. Go to https://id.unity.com/en/conversations/41750435-f67a-4881-a6e5-5dec3c05f731019f and create an account if you do not already have one.
+1. You must have a Unity account to sign in to Unity. Go to https://id.unity.com/en/conversations/0b3ae7d5-ce6d-48a6-ae31-bdc56eacd6cd002f?view=register and create an account if you do not already have one.
 
 Your development environment is now configured. If you have a HoloLens device, proceed to [Exercise 2](#Exercise2). Otherwise, skip to [Exercise 3](#Exercise3).
 
@@ -266,17 +266,7 @@ Congratulations! You've created and built a Unity project that supports the Wind
 
 In this exercise, you will create a new project and use HoloToolkit to streamline the project setup.
 
-1. Download or clone the HoloToolkit repository from GitHub to your local Windows PC. The repository can be found at https://github.com/Microsoft/HoloToolkit-Unity. This package is updated frequently, and you want to use the latest and greatest.
-
-1. Open the downloaded HoloToolkit project folder in Unity.
-
-1. In the Project pane, select the "Assets" folder at the root of the project. Right-click the folder and select **Export Package...**. Be sure to export the entire "Assets" folder, including dependencies.
-
-    ![Exporting project assets](Images/export.jpg)
-
-    _Exporting project assets_
-
-1. Enter a name and location for the exported package file. The package can be reused in other projects, so it is a good idea to save it outside of your project folders. It is also advisable to include the current date in the package's file name so you are always aware of how old the package content is.
+1. Download the package https://github.com/Microsoft/MixedRealityToolkit-Unity/releases/download/2017.4.2.0/HoloToolkit-Unity-2017.4.2.0.unitypackage
 
 1. Click **+ New** and create a new Unity project. From the **Assets** menu, select **Import Package** and then **Custom Package...**.
 
@@ -284,7 +274,7 @@ In this exercise, you will create a new project and use HoloToolkit to streamlin
 
     _Importing HoloToolkit_
 
-1. Select the package file that you exported in Step 3, and click the **Open...** button.
+1. Select the package file that you downloaded in step 1, and click the **Open...** button.
 
 1. Unity gives you the option of selecting which assets to import. In this case, you can unselect the "HoloToolkit-Examples" subtree to reduce the size of the code base. Once you've specified which assets to include, click the **Import** button.
 
@@ -316,11 +306,11 @@ In this exercise, you will create a new project and use HoloToolkit to streamlin
 
 1. From the **HoloToolkit** menu, select **Build Window**. From here, you can directly export a Visual Studio solution and also launch Visual Studio with the exported solution. It is also possible to compile an APPX package and deploy it directly from this dialog, but this is not as common as compiling and deploying from Visual Studio.
 
-1. Click the **Build Visual Studio SLN** button to export the Unity project to Visual Studio.
+1. Click the **Build Unity Project** button to export the Unity project to Visual Studio.
 
-    > You only need to click the **Build Visual Studio SLN** button when non-script assets have changed. Script changes are automatically kept in sync between Visual Studio and Unity.
+    > You only need to click the **Build Unity Project** button when non-script assets have changed. Script changes are automatically kept in sync between Visual Studio and Unity.
 
-1. Click the **Open SLN** button to launch Visual Studio with the exported solution.
+1. Click the **Open Visual Studio** button to launch Visual Studio with the exported solution.
 
 You now know how to configure a holographic project manually, and how to expedite the process with HoloToolkit. The latter provides some additional benefit in the form of prefabricated components that speed the development process. With the project set up, it is now time to build it so you can see it come to life.
 
