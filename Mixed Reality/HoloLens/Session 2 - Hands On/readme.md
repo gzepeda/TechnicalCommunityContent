@@ -79,9 +79,13 @@ In this exercise, you will prepare your development environment so you can build
 
 1. If you haven't already, download and install the latest release of Visual Studio from https://www.visualstudio.com/vs/. Any version will do, even the free Community Edition. Be sure to install the Universal Windows App Development Tools, since HoloLens apps are Universal Windows Platform (UWP) apps.
 
-    ![Installing UWP tools when installing Visual Studio](Images/vs_install.png)
+    ![](Images/Install_UWP.png)
 
     _Installing UWP tools when installing Visual Studio_
+    
+    ![](Images/InstallUnityTools.png)
+
+    _Installing Unity tools_
 
 1. Launch Visual Studio and select **Options...** from the **Tools** menu. Under the General settings for NuGet Package Manager, ensure that **Allow NuGet to download missing packages** and **Automatically check for missing packages during build in Visual Studio** are both checked. Your Unity builds will fail later if these features are not enabled.
 
@@ -89,9 +93,9 @@ In this exercise, you will prepare your development environment so you can build
 
     _Enabling NuGet options_
 
-1. Download and install the latest version of the HoloLens emulator package. You will find a link to the current release in the [Installation checklist](https://developer.microsoft.com/en-us/windows/holographic/install_the_tools#installation_checklist) on Microsoft's HoloLens developer portal.
+1. Download and install the latest version of the HoloLens emulator package. You will find a link to the current release in the [Installation checklist](https://developer.microsoft.com/en-us/windows/holographic/install_the_tools#installation_checklist) on Microsoft's HoloLens developer portal. Direct Link to Emulator: https://go.microsoft.com/fwlink/?linkid=852626
 
-    > The emulator isn't strictly necessary if you have a HoloLens available, but the installation package also comes with additional app templates. Also, the emulator allows you to simulate a specific room interior (captured from an actual device beforehand), which can be quite useful in certain scenarios. https://go.microsoft.com/fwlink/?linkid=852626
+    > The emulator isn't strictly necessary if you have a HoloLens available, but the installation package also comes with additional app templates. Also, the emulator allows you to simulate a specific room interior (captured from an actual device beforehand), which can be quite useful in certain scenarios. 
 
     ![Installing the HoloLens emulator](Images/emulator_install.jpg)
 
@@ -211,19 +215,19 @@ In this exercise, you will create a new Unity project and configure it to target
 
     _Accessing build settings_
 
-1. In the list of platforms, select **Windows Store** and then click the **Switch Platform** button.
+1. In the list of platforms, select **Universal Windows Platform** and then click the **Switch Platform** button.
 
-    ![Switching build platforms](Images/switch_platforms.jpg)
+    ![Switching build platforms](Images/SelectUWP.png)
 
     _Switching build platforms_
 
-1. With **Windows Store** still selected in the list, make the following changes to the settings in the panel next to it:
+1. With **Universal Windows Platform** still selected in the list, make the following changes to the settings in the panel next to it:
 
    - Set **SDK** to **Universal 10**
    - Set **UWP Build Type** to **D3D**
    - Check the **Unity C# Projects** box (this enables Visual Studio editing)
 
-    ![Changing platform settings](Images/windows_store_settings.jpg)
+    ![Changing platform settings](Images/OptionsUWP.png)
 
     _Changing platform settings_
 
