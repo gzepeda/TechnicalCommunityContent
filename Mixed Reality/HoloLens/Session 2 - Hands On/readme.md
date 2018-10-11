@@ -429,7 +429,7 @@ One of the strengths of the Unity platform is that it offers a large array of pr
     
     public class Fountain : MonoBehaviour, IInputClickHandler
     {
-        public void OnInputClicked(InputEventData eventData)
+        public void OnInputClicked(InputClickedEventData eventData)
         {
             var gaze = InputManager.Instance.GetComponent<GazeManager>();
             if (gaze.IsGazingAtObject && gaze.HitObject == gameObject)
@@ -513,7 +513,7 @@ One of the strengths of the Unity platform is that it offers a large array of pr
     {
         private ParticleSystem particles;
     
-        public void OnInputClicked(InputEventData eventData)
+        public void OnInputClicked(InputClickedEventData eventData)
         {
             var gaze = InputManager.Instance.GetComponent<GazeManager>();
             if (gaze.IsGazingAtObject && gaze.HitObject == gameObject)
