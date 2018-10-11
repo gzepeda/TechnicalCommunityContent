@@ -431,8 +431,9 @@ One of the strengths of the Unity platform is that it offers a large array of pr
     {
         public void OnInputClicked(InputClickedEventData eventData)
         {
-            var gaze = InputManager.Instance.GetComponent<GazeManager>();
-            if (gaze.IsGazingAtObject && gaze.HitObject == gameObject)
+           var focus = InputManager.Instance.GetComponent<FocusManager>();
+           FocusDetails focusDetails = (FocusDetails)focus.TryGetFocusDetails(eventData);
+           if (focusDetails.Object && focusDetails.Object == gameObject)
             {
                 Debug.Log(gameObject.name + " clicked");
             }
@@ -516,8 +517,9 @@ One of the strengths of the Unity platform is that it offers a large array of pr
     
         public void OnInputClicked(InputClickedEventData eventData)
         {
-            var gaze = InputManager.Instance.GetComponent<GazeManager>();
-            if (gaze.IsGazingAtObject && gaze.HitObject == gameObject)
+            var focus = InputManager.Instance.GetComponent<FocusManager>();
+            FocusDetails focusDetails = (FocusDetails)focus.TryGetFocusDetails(eventData);
+            if (focusDetails.Object && focusDetails.Object == gameObject)
             {
                 Debug.Log(gameObject.name + " clicked");
                 if (particles.isPlaying)
