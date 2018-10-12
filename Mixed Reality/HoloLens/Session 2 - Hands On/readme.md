@@ -442,7 +442,6 @@ One of the strengths of the Unity platform is that it offers a large array of pr
         // Use this for initialization
         void Start ()
         {
-	    InputManager.Instance.AddGlobalListener(gameObject);
         }
     
         // Update is called once per frame
@@ -536,13 +535,7 @@ One of the strengths of the Unity platform is that it offers a large array of pr
         // Use this for initialization
         void Start ()
         {
-	    InputManager.Instance.AddGlobalListener(gameObject);
-            
 	    particles = gameObject.GetComponentInChildren<ParticleSystem>();
-            if (particles.isPlaying)
-            {
-                particles.Stop();
-            }
         }
     
         // Update is called once per frame
